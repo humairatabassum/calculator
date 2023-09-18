@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Btn {
   static const String div = "/";
   static const String mult = "X";
@@ -26,5 +28,12 @@ class Btn {
     [n4, n5, n6, sub],
     [n1, n2, n3, add],
     [dot, n0, equal],
+  ];
+  static const List<List<Color>> colors = [
+    [Colors.black, Colors.black, Colors.black, Colors.black],
+    [Colors.black, Colors.black, Colors.black, Colors.black],
+    [Colors.black, Colors.black, Colors.black, Colors.black],
+    [Colors.black, Colors.black, Colors.black, Colors.black],
+    [Colors.black, Colors.black, Colors.amber],
   ];
 }

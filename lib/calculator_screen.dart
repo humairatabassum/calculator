@@ -41,7 +41,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     for (int j = 0; j < Btn.buttons[i].length; j++)
                       Expanded(
                         flex: Btn.buttons[i][j] == Btn.equal ? 2 : 1,
-                        child: buildButton(Btn.buttons[i][j]),
+                        child: buildButton(Btn.buttons[i][j], Btn.colors[i][j]),
                       )
                   ],
                 ),
@@ -64,14 +64,15 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     );
   }
 
-  Widget buildButton(value) {
+  Widget buildButton(String value, Color color) {
     return Container(
       margin: const EdgeInsets.all(2),
       decoration: BoxDecoration(
+        color: color,
         border: Border.all(
-          color: const Color.fromARGB(255, 198, 225, 226),
+          color: const Color.fromARGB(255, 12, 12, 12),
         ),
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(100),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -79,7 +80,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           Text(value,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 20,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
               )),
         ],
