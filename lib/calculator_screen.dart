@@ -9,6 +9,8 @@ class CalculatorScreen extends StatefulWidget {
 }
 
 class _CalculatorScreenState extends State<CalculatorScreen> {
+  String output = "0";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +24,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               child: Container(
                 alignment: Alignment.bottomRight,
                 padding: const EdgeInsets.all(12),
-                child: const Text(
-                  '0',
-                  style: TextStyle(
+                child: Text(
+                  output,
+                  style: const TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
                   ),
@@ -41,7 +43,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     for (int j = 0; j < Btn.buttons[i].length; j++)
                       Expanded(
                         flex: Btn.buttons[i][j] == Btn.equal ? 2 : 1,
-                        child: buildButton(Btn.buttons[i][j], Btn.colors[i][j]),
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              output = output + Btn.buttons[i][j]; 
+                              
+                            });
+                          },
+                          child: buildButton(
+                            Btn.buttons[i][j],
+                            Btn.colors[i][j],
+                          ),
+                        ),
                       )
                   ],
                 ),
