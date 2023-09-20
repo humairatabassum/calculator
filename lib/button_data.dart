@@ -5,7 +5,7 @@ class Btn {
   static const String mult = "X";
   static const String mod = "%";
   static const String add = "+";
-  static const String sub = "_";
+  static const String sub = "-";
   static const String equal = "=";
   static const String clr = "C";
   static const String del = "D";
@@ -30,10 +30,10 @@ class Btn {
     [dot, n0, equal],
   ];
   static const List<List<Color>> colors = [
-    [Colors.black, Colors.black, Colors.black, Colors.black],
-    [Colors.black, Colors.black, Colors.black, Colors.black],
-    [Colors.black, Colors.black, Colors.black, Colors.black],
-    [Colors.black, Colors.black, Colors.black, Colors.black],
+    [Colors.blueGrey, Colors.blueGrey, Colors.amber, Colors.amber],
+    [Colors.black, Colors.black, Colors.black, Colors.amber],
+    [Colors.black, Colors.black, Colors.black, Colors.amber],
+    [Colors.black, Colors.black, Colors.black, Colors.amber],
     [Colors.black, Colors.black, Colors.amber],
   ];
 }
