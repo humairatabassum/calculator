@@ -103,130 +103,209 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     );
   }
 
-  calculate(int i, int j) {
-    //for num1
-    if (num1 == null && num2 == null && operand == null) {
-      if (Btn.buttons[i][j] == Btn.n0) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.dot) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.del) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.clr) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.mod) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.div) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.mult) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.sub) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.add) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.equal) {
-        return;
-      }
+  // calculate(int i, int j) {
+  //   //for num1
+  //   if (num1 == null && num2 == null && operand == null) {
+  //     if (Btn.buttons[i][j] == Btn.n0) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.dot) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.del) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.clr) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.mod) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.div) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.mult) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.sub) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.add) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.equal) {
+  //       return;
+  //     }
 
+  //     setState(() {
+  //       output = Btn.buttons[i][j]; //show
+  //     });
+  //     num1 = double.parse(output); //backnd
+  //     //print num1
+  //     print(num1);
+  //     return;
+  //   } else if (num1 != null && operand == null) {
+  //     if (Btn.buttons[i][j] == Btn.n1) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n2) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n3) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n4) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n5) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n6) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n7) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n8) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n9) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.n0) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.dot) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.del) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.clr) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.equal) {
+  //       return;
+  //     }
+  //     setState(() {
+  //       output = output + Btn.buttons[i][j]; //show
+  //     });
+  //     operand = Btn.buttons[i][j]; //backnd
+  //     print(operand);
+  //     return;
+  //   } else if (num1 != null && operand != null && num2 == null) {
+  //     if (Btn.buttons[i][j] == Btn.del) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.clr) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.mod) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.div) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.mult) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.sub) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.add) {
+  //       return;
+  //     }
+  //     if (Btn.buttons[i][j] == Btn.equal) {
+  //       return;
+  //     }
+
+  //     setState(() {
+  //       {
+  //         output = output + Btn.buttons[i][j]; //show
+  //       }
+  //     });
+
+  //     num2 = double.parse(Btn.buttons[i][j]); //backnd
+  //     print(num2);
+  //     return;
+  //   } else if (Btn.buttons[i][j] == Btn.equal) {
+  //     if (num1 == null || num2 == null || operand == null) {
+  //       return;
+  //     }
+  //     if (operand == Btn.div && num2 == 0) {
+  //       setState(() {
+  //         output = "Error";
+  //       });
+  //     }
+  //     if (operand == Btn.add) {
+  //       setState(() {
+  //         output = (num1! + num2!).toString();
+  //       });
+  //     }
+  //     if (operand == Btn.sub) {
+  //       setState(() {
+  //         output = (num1! - num2!).toString();
+  //       });
+  //     }
+  //     if (operand == Btn.mult) {
+  //       setState(() {
+  //         output = (num1! * num2!).toString();
+  //       });
+  //     }
+  //     if (operand == Btn.div) {
+  //       setState(() {
+  //         output = (num1! / num2!).toString();
+  //       });
+  //     }
+  //     if (operand == Btn.mod) {
+  //       setState(() {
+  //         output = (num1! % num2!).toString();
+  //       });
+  //     }
+  //   } else if (Btn.buttons[i][j] == Btn.clr) {
+  //     setState(() {
+  //       num1 = null;
+  //       num2 = null;
+  //       operand = null;
+  //       output = "0";
+  //     });
+  //   } else if (Btn.buttons[i][j] == Btn.del) {
+  //     setState(() {
+  //       output = output.substring(0, output.length - 1);
+  //     });
+  //   }
+  // }
+
+  calculate(int i, j) {
+    if (Btn.buttons[i][j] == Btn.del) {
       setState(() {
-        output = output + Btn.buttons[i][j]; //show
+        output = output.substring(0, output.length - 1);
       });
-      num1 = double.parse(output); //backnd
-      //print num1
-      print(num1);
-      return;
-    } else if (num1 != null && operand == null) {
-      if (Btn.buttons[i][j] == Btn.n1) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n2) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n3) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n4) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n5) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n6) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n7) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n8) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n9) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.n0) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.dot) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.del) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.clr) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.equal) {
-        return;
-      }
+    } else if (Btn.buttons[i][j] == Btn.clr) {
       setState(() {
-        output = output + Btn.buttons[i][j]; //show
+        num1 = null;
+        num2 = null;
+        operand = null;
+        output = "0";
       });
-      operand = Btn.buttons[i][j]; //backnd
-      print(operand);
-      return;
-    } else if (num1 != null && operand != null && num2 == null) {
-      if (Btn.buttons[i][j] == Btn.dot) {
+    } else if (Btn.operands.contains(Btn.buttons[i][j])) {
+      if(operand != null){
         return;
       }
-      if (Btn.buttons[i][j] == Btn.del) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.clr) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.mod) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.div) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.mult) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.sub) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.add) {
-        return;
-      }
-      if (Btn.buttons[i][j] == Btn.equal) {
-        return;
-      }
+      output = output + Btn.buttons[i][j];
       setState(() {
-        output = output + Btn.buttons[i][j]; //show
+        operand = Btn.buttons[i][j];
       });
-      num2 = double.parse(Btn.buttons[i][j]); //backnd
-      print(num2);
-      return;
+    } else if (Btn.numbers.contains(Btn.buttons[i][j])) {
+      output = output + Btn.buttons[i][j];
+      if (operand == null) {
+        num1 = double.parse(output);
+        print(num1);
+      } else {
+        final temp = output.split(operand!).last;
+        num2 = double.parse(temp);
+      }
+      setState(() {});
     } else if (Btn.buttons[i][j] == Btn.equal) {
       if (num1 == null || num2 == null || operand == null) {
         return;

@@ -22,6 +22,30 @@ class Btn {
   static const String n9 = "9";
   static const String n0 = "0";
 
+  static const List<String> numbers = [
+    n0,
+    n1,
+    n2,
+    n3,
+    n4,
+    n5,
+    n6,
+    n7,
+    n8,
+    n9,
+    dot
+  ];
+
+  static const List<String> operands = [
+    div,
+    mult,
+    mod,
+    add,
+    sub,
+    clr,
+    del,
+  ];
+
   static const List<List<String>> buttons = [
     [del, clr, mod, div],
     [n7, n8, n9, mult],
